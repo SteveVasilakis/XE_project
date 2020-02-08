@@ -2,12 +2,12 @@ from kafka import KafkaConsumer, TopicPartition
 from kafka.errors import NoBrokersAvailable
 import dateutil.parser
 import pymysql
-import os, json, ast, datetime, re
+import os, json, ast, datetime, re, sys
 
-host = ''
-user = ''
-pwd = ''
-db = ''
+host = sys.argv[1]
+user = sys.argv[2]
+pwd = sys.argv[3]
+db = sys.argv[4]
 
 def connect_to_mysql():
     try:
