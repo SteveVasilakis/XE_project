@@ -4,12 +4,10 @@ import dateutil.parser
 import pymysql
 import os, json, ast, datetime, re
 
-
-
-host = 'svdataengineer.cg2t1fioak49.eu-west-3.rds.amazonaws.com'
-user = 'root'
-pwd = 'UfPxTfNcukx54YT9HRApkvsmLLzFTa39'
-db = 'svdataengineer'
+host = ''
+user = ''
+pwd = ''
+db = ''
 
 def connect_to_mysql():
     try:
