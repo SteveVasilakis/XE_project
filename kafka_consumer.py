@@ -45,11 +45,10 @@ def main():
     consumer.assign([partition]) #assign 1 partition
     for message in consumer:
         msg = ast.literal_eval(message.value.decode('utf-8'))
-        id1 = msg['id']
-        duplicate = duplicate_check(id1)
+        id = msg['id']
+        duplicate = duplicate_check(id)
         if duplicate == 0:
             try:
-                id = msg['id']
                 customer_id = msg['customer_id']
                 created_at = dateutil.parser.parse(msg['created_at'])
                 text = msg['text']
