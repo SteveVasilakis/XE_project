@@ -1,13 +1,15 @@
-To Start Kafka consumer:
+**To Start Kafka consumer:**
 
-In terminal:
+*In terminal:*
 1. pip install requirements.txt
 2. python kafka_consumer.py
 
-###################### SQL PART ##############
-Classifieds Table:
+**SQL PART** 
+*Classifieds Table:*
 
-!! HAD TO LIMIT VARCHAR TO 200 DUE TO INABILITY OF EXECUTING QUERY FOR MORE (that leads to missing text -- i would put it to max which is 65535)!! 
+*!! HAD TO LIMIT VARCHAR TO 200 DUE TO INABILITY OF EXECUTING QUERY FOR MORE (that leads to missing text -- i would put it to max which is 65535)!!*
+
+```
 +--------------+--------------+------+-----+---------+-------+
 | Field        | Type         | Null | Key | Default | Extra |
 +--------------+--------------+------+-----+---------+-------+
@@ -21,9 +23,10 @@ Classifieds Table:
 | payment_type | text         | YES  |     | NULL    |       |
 | payment_cost | float        | YES  |     | NULL    |       |
 +--------------+--------------+------+-----+---------+-------+
+```
 
-Margin_per_hour Table:
-
+*Margin_per_hour Table:*
+```
 +--------------+--------------+------+-----+---------+--------+
 | Field        | Type          | Null | Key | Default | Extra |
 +--------------+---------------+------+-----+---------+-------+
@@ -32,12 +35,13 @@ Margin_per_hour Table:
 | margin       | decimal(5,2)  | YES  |     | NULL    |       |
 | date         | datetime      | YES  |     | NULL    |       |
 +--------------+---------------+------+-----+---------+-------+
-
-To find Margin for a specific period of time:
+```
+**To find Margin for a specific period of time:**
 
 Copy and paste content of Margin_Specific.sql script in Mysql terminal and set variables from_date/to_date to the desired time interval.
 
-To Schedule the event:
+**To Schedule the event:**
 
 mysql> SET GLOBAL event_scheduler = ON;
+
 Then copy and paste content of Margin_Scheduler.sql into mysql terminal.
