@@ -2,7 +2,7 @@
 
 *In terminal:*
 1. pip install requirements.txt
-2. python kafka_consumer.py
+2. python kafka_consumer.py '{host}' '{user}' '{pwd}' '{database}'
 
 **SQL PART** 
 
