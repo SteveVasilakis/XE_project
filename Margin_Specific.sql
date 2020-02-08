@@ -1,6 +1,6 @@
 -- set interval for margin calculation
--- set @from_date := "";
--- set @to_date := "";
+set @from_date := "";
+set @to_date := "";
 
 
 SELECT ad_type, payment_type, concat(round(((price-payment_cost)/price )*100, 2),'%') AS margin,  @from_date as Date_from , @to_date as Date_to
