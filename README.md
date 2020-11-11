@@ -10,7 +10,6 @@
 
 *Classifieds Table:*
 
-*!! HAD TO LIMIT VARCHAR TO 200 DUE TO INABILITY OF EXECUTING QUERY FOR MORE (that leads to missing text -- i would put it to max which is 65535)!!*
 
 ```
 +--------------+--------------+------+-----+---------+-------+
